@@ -19,14 +19,6 @@ export default observer(() => {
     const state = useApplicationState();
     const { server: server_id } = useParams<{ server?: string }>();
 
-    const createServer = useCallback(
-        () =>
-            modalController.push({
-                type: "create_server",
-            }),
-        [],
-    );
-
     return (
         <ServerList
             client={client}
